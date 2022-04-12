@@ -100,7 +100,7 @@ class BruteForce:
 
         entry = search(LOG_LINE, line.strip())
         if not entry:
-            print line
+            print (line)
         if entry:
             time_string, user = findall(LOG_LINE, line.strip())[0]
             if "invalid user" in user:
@@ -113,7 +113,7 @@ class BruteForce:
             else:
                 self.failed_logins[user] = [time]
             if self.check_brute_force(user) == True:
-                print ctime(),"Brute-Force attack detected against user account:",user
+                print ( ctime(),"Brute-Force attack detected against user account:",user )
 
 #
 #   Using window and threshold settings, whenever called,
